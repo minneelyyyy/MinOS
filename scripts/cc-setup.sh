@@ -1,19 +1,19 @@
 # this script is just copied from https://github.com/mell-o-tron/MellOs
 
 # nasm and qemu
-sudo apt install nasm
-sudo apt install qemu
-sudo apt-get install qemu-kvm
+sudo apt install -y nasm
+sudo apt install -y qemu
+sudo apt-get install -y qemu-kvm
 
 # GCC cross compiler for i386 systems (might take quite some time, prepare food)
 
-sudo apt install build-essential
-sudo apt install bison
-sudo apt install flex
-sudo apt install libgmp3-dev
-sudo apt install libmpc-dev
-sudo apt install libmpfr-dev
-sudo apt install texinfo
+sudo apt install -y build-essential
+sudo apt install -y bison
+sudo apt install -y flex
+sudo apt install -y libgmp3-dev
+sudo apt install -y libmpc-dev
+sudo apt install -y libmpfr-dev
+sudo apt install -y texinfo
 
 export PREFIX="/usr/local/i386elfgcc"
 export TARGET=i386-elf
