@@ -1,3 +1,5 @@
+# this script is just copied from https://github.com/mell-o-tron/MellOs
+
 # nasm and qemu
 sudo apt install nasm
 sudo apt install qemu
