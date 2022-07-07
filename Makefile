@@ -19,7 +19,7 @@ $(BUILD):
 
 
 $(c_objects): $(BUILD)/%.o : src/%.c
-	$(CC) -c -nostdlib -nostdinc -ffreestanding $(patsubst $(BUILD)/%.o, src/%.c, $@) -o $@
+	$(CC) -c -nostdlib -nostdinc -fno-builtin -fno-stack-protector -ffreestanding $(patsubst $(BUILD)/%.o, src/%.c, $@) -o $@
 
 $(assembly_objects): $(BUILD)/%.o : src/%.asm
 	$(ASM) -felf32 $(patsubst $(BUILD)/%.o, src/%.asm, $@) -o $@
