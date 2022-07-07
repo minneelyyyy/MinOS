@@ -1,13 +1,13 @@
 #ifndef __INTTYPES_H
 #define __INTTYPES_H
 
-typedef int int32_t;
-typedef unsigned int uint32_t;
+typedef int i32;
+typedef unsigned int u32;
 
-typedef short int16_t;
-typedef unsigned short uint16_t;
+typedef short i16;
+typedef unsigned short u16;
 
-typedef char int8_t;
-typedef unsigned char uint8_t;
+typedef char i8;
+typedef unsigned char u8;
 
 #endif /* __INTTYPES_H */

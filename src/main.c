@@ -1,6 +1,6 @@
 
-#include "include/inttypes.h"
-#include "include/vga.h"
+#include <inttypes.h>
+#include <vga.h>
 
 void kmain() {
     vga_clear();
