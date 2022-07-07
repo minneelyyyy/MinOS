@@ -15,7 +15,7 @@ include_dir := src/include
 
 .PHONY: all clean
 
-all: geniso/boot/minos.bin build/minos.iso
+all: build/minos.iso
 
 
 $(c_objects): $(BUILD)/%.o : src/%.c
@@ -37,7 +37,7 @@ geniso/boot/minos.bin: build/minos.bin
 	@echo " CP      $^ -> $@"
 	@cp build/minos.bin geniso/boot/minos.bin > /dev/null
 
-build/minos.iso:
+build/minos.iso: geniso/boot/minos.bin
 	@echo " MKRCUE  $@"
 	@grub-mkrescue /usr/lib/grub/i386-pc -o build/minos.iso geniso/ > /dev/null 2>&1
 
