@@ -33,3 +33,13 @@ Tip: In order to recompile, use `make clean && make`
 ```console
 $ sh run.sh # use run.bat on Windows
 ```
+
+# Resources
+Wanna learn OS Dev? Here are a few good resources.
+
+ - [Intel 64 and IA-32 Software Developer's Manual](https://www.intel.com/content/www/us/en/developer/articles/technical/intel-sdm.html)
+ - [OSDev Wiki](https://wiki.osdev.org/Main_Page)
+ - [James Molloy](http://www.jamesmolloy.co.uk/tutorial_html/)
+   This tutorial uses Multiboot 1, which is not compatbile with Multiboot 2. Use Multiboot 2
+ - [Three Easy Pieces](https://pages.cs.wisc.edu/~remzi/OSTEP/) (explains high level concepts)
+ - Looking at code from other operating systems
