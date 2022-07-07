@@ -5,7 +5,7 @@
 #include "../include/inttypes.h"
 
 /* cursor always points to next empty space */
-uint32_t cursor = 0;
+u32 cursor = 0;
 
 /* pointer to video memory
  * every byte thats at an even address is a character.
@@ -20,6 +20,10 @@ char *const vmem = (char*) 0xb8000;
 
 /* print a string to the terminal */
 void vga_print(const char *str) {
+    if (str == NULL) {
+        return;
+    }
+
     while (*str != 0) {
         switch (*str) {
             case '\n':
@@ -44,8 +48,9 @@ void vga_print(const char *str) {
         str++;
 
         /* TODO: add a line to the bottom if reached. */
-        if (cursor > VMEM_SIZE)
+        if (cursor > VMEM_SIZE) {
             cursor = 0;
+        }
     }
 }
 
