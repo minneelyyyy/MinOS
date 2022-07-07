@@ -11,6 +11,8 @@ c_objects := $(patsubst src/%.c, $(BUILD)/%.o, $(c_sources))
 assembly_sources := $(shell find src/ -name "*.asm")
 assembly_objects := $(patsubst src/%.asm, $(BUILD)/%.o, $(assembly_sources))
 
+include_dir := src/include
+
 .PHONY: all clean
 
 all: geniso/boot/minos.bin build/minos.iso
@@ -19,7 +21,7 @@ all: geniso/boot/minos.bin build/minos.iso
 $(c_objects): $(BUILD)/%.o : src/%.c
 	@echo " CC      $(patsubst $(BUILD)/%.o,src/%.c,$@)"
 	@mkdir -p $(dir $@) > /dev/null
-	@$(CC) $(CFLAGS) $(patsubst $(BUILD)/%.o, src/%.c, $@) -o $@ > /dev/null
+	@$(CC) $(CFLAGS) -I$(include_dir) $(patsubst $(BUILD)/%.o, src/%.c, $@) -o $@ > /dev/null
 
 $(assembly_objects): $(BUILD)/%.o : src/%.asm
 	@echo " AS      $(patsubst $(BUILD)/%.o,src/%.asm,$@)"
