@@ -2,17 +2,17 @@ ENTRY(start)
 
 SECTIONS
 {
-	. = 1M;
+  . = 1M;
 
-	.boot :
-	{
-		KEEP(*(.multiboot_header))
-	}
+  .boot :
+  {
+    KEEP(*(.multiboot_header))
+  }
 
-	.text :
-	{
-		*(.text)
-	}
+  .text :
+  {
+    *(.text)
+  }
 
   .rodata :
   {
