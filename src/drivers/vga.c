@@ -1,8 +1,9 @@
 /* colors are 1 byte and can be created in
  * the format of 'bg_color << 4 | fg_color' */
 
-#include "../include/vga.h"
-#include "../include/inttypes.h"
+#include <common.h>
+#include <inttypes.h>
+#include <vga.h>
 
 /* cursor always points to next empty space */
 u32 cursor = 0;
