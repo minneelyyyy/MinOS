@@ -7,7 +7,6 @@ sudo apt-get install qemu-kvm
 
 # GCC cross compiler for i386 systems (might take quite some time, prepare food)
 
-sudo apt update
 sudo apt install build-essential
 sudo apt install bison
 sudo apt install flex
