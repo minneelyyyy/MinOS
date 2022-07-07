@@ -15,9 +15,8 @@ sudo apt install -y libmpc-dev
 sudo apt install -y libmpfr-dev
 sudo apt install -y texinfo
 
-export PREFIX="/usr/local/i386elfgcc"
-export TARGET=i386-elf
-export PATH="$PREFIX/bin:$PATH"
+PREFIX="/usr/local/i386elfgcc"
+TARGET=i386-elf
 
 mkdir /tmp/src
 cd /tmp/src
